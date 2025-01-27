@@ -5,5 +5,9 @@ Address = pd.DataFrame({'addressId': [1, 2], 'personId': [2,3], 'city': ['New Yo
 
 
 #combine two tables
-combine_two_tables = Person.merge(Address, how='left', on='personId')
-print(combine_two_tables[['firstName', 'lastName', 'city', 'state']])
+def combine_two_tables(Person, Address):
+    result = pd.merge(Person, Address, how='left', on='personId')
+    result = result[['firstName', 'lastName', 'city', 'state']]
+    return result
+
+combine_two_tables(Person, Address)
