@@ -11,3 +11,4 @@ def combine_two_tables(Person, Address):
     return result
 
 combine_two_tables(Person, Address)
+print(Person)
