@@ -13,5 +13,5 @@ def combine_two_tables(Person, Address):
     return result
 
 #call function
-combine_two_tables(Person, Address)
+
 print(Person)
